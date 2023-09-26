@@ -1,0 +1,126 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #777777;
+}
+
+.content{
+    padding: 1rem;
+    height: 100%;
+    background-color: #fff;
+}
+
+.cards{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.card{
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .poke-details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 60px;
+}
+
+.card .poke-number{
+    margin-right: 10px;
+}
+
+.card .poke-name{
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.card .poke-type{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.card .types{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card .type{
+    color: #fff;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    font-size: .985rem;
+    filter: contrast(1.5);
+    filter: brightness(1.1);
+}
+
+.card .poke-type .poke-img{
+    max-width: inherit;
+    height: 100px;
+}
+
+@media (min-width: 396px) {
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .content{
+        max-width: 768px;
+        margin: 1rem auto;
+        border-radius: .9rem;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr) ;
+    }
+
+    .card{
+        margin-left: 0;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .content{
+        max-width: 1020px;
+        margin: 1rem auto;
+        border-radius: .9rem;
+    }
+
+    .cards{
+        grid-template-columns: repeat(3, 1fr) ;
+    }
+
+    .card{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .card .poke-type{
+        column-gap: 20px;
+    }
+
+    .poke-img{
+        height: 60px !important;
+    }
+}
